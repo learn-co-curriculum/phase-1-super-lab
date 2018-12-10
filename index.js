@@ -13,7 +13,7 @@ class Quadrilateral {
 
   // unable to get this to work/test
   set setColor(r,g,b) {
-    let rbg;
+    let rbg = []
     rgb[0] = r
     rgb[1] = g
     rgb[2] = b
