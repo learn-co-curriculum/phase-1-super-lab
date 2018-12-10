@@ -20,7 +20,8 @@ describe( "Quadrilateral", () => {
     expect( quadrilateral.perimeter ).to.eq( 50 )
   } )
 
-  it( "Quadrilateral has a color() setter method that sets the shape's color", () => {
+  // I want this method to be able to take in 3 RGB values and convert that to a text string of the color
+  it( "Quadrilateral has a setColor() setter method that sets the shape's color", () => {
     expect( quadrilateral.setColor ).to.eq("red")
   } )
 } )
@@ -45,6 +46,8 @@ describe( "Square", () => {
     expect( square.perimeter ).to.eq( 50 )
   } )
 
+  // This would check for the [shape] is [red] if the setColor() method was working
+  // I want this to be inheritable by children so color can be set
   it( "Square sayColor() returns 'red'", () => {
     expect( square.sayColor ).to.exist
   } )
@@ -161,7 +164,7 @@ describe( "Parallelogram", () => {
     expect( parallelogram.perimeter ).to.eq( 50 )
   } )
 
-  it( "Parallelogram sayColor() returns 'yellow'", () => {
+  it( "Parallelogram sayColor() returns 'cyan'", () => {
     expect( parallelogram.sayColor ).to.exist
   } )
 
@@ -190,7 +193,7 @@ describe( "Kite", () => {
     expect( kite.perimeter ).to.eq( 40 )
   } )
 
-  it( "Kite sayColor() returns 'yellow'", () => {
+  it( "Kite sayColor() returns 'magenta'", () => {
     expect( kite.sayColor ).to.exist
   } )
 
@@ -219,7 +222,7 @@ describe( "Trapezium", () => {
     expect( trapezium.perimeter ).to.eq( 40 )
   } )
 
-  it( "Kite sayColor() returns 'yellow'", () => {
+  it( "Kite sayColor() returns 'white'", () => {
     expect( trapezium.sayColor ).to.exist
   } )
 

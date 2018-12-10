@@ -4,6 +4,7 @@ class Quadrilateral {
     this.side2 = side2
     this.side3 = side3
     this.side4 = side4
+    this.color = "black"
   }
 
   get perimeter() {
@@ -11,7 +12,11 @@ class Quadrilateral {
   }
 
   // unable to get this to work/test
-  set setColor(rgb) {
+  set setColor(r,g,b) {
+    let rbg;
+    rgb[0] = r
+    rgb[1] = g
+    rgb[2] = b
     if (rgb === [255,0,0]) {
       this.color = "red"
     } else if (rgb === [0,255,0]) {
