@@ -2,88 +2,51 @@
 
 ## Learning Goals
 
-1. Practice building additional functionality into subclasses
+1.  Practice using `super` to extend child class functionality
 
 ## Introduction
 
-In this lab we're going to create a geometry application that allows us to
-manipulate different properties of 4-sided shapes (quadrilaterals). We'll be using
-JavaScript's `class` keyword to build objects that inherit from its base object,
-and variations of `super` to build on existing class functionality.
+In this lab we're going to practice the two most common usages of the `super`
+keyword.
 
-## Practice Building Additional Functionality Into Subclasses
+## Instructions
 
-1. Define a `Quadrilateral` class` that accepts **four** integer parameters.
-* Define a `perimeter()` getter method that calculates perimeter.
-* Define a `color()` method that checks against each RGB set as an `Array`: 
-  - `[255,0,0]` for red
-  - `[0,255,0]` for green
-  - `[0,0,255]` for blue 
-  - `[255,255,0]` for yellow
-  - `[0,255,255]` for cyan
-  - `[255,0,255]` for magenta
-  - `[255,255,255]` for white
-  Each conditional will return a `String`, with the value of the color name (ex:
-  "red").
+1.  Define a `Tree` class that will act as our parent.
 
-  ```js
-    if (rgb === [255,0,0]) {
-      returns "red"
-    } else if...
-    ...
-    }
-  ```
+    - A `Tree` instance should take in one parameter when created, `species`,
+      and assign this to a private property, `_species`
+    - A `Tree` should have a static method `baseDefinition` that states a short
+      definition of all trees.
 
-For each of the following child classes you will do the following:
-* Use super in the constructor to inherit each side. Add a static
-`name` property as the name of the shape _lowercase_.
-* Define a method called `sayColor()` that returns  ``The ${this.name} is ${super.color()}.``.
-The return value will utilize `super` as a method.
+    > A tree is a perennial plant with an elongated stem, or trunk, supporting
+    > branches and leaves.
 
-2. Define a `Square` subclass.
-* Set the static `name` property to `square`.
-* `Square` inherits `perimeter()` and can calculate perimeter
-* Define a method called `sayColor()` on `Square` that returns "The square is red" that uses the method from `color()` and the `name` property.
-* Define a method called `description()` on `Square` that returns: "A parallelogram in which all the sides are equal and each angle measures 90° is called a square."
+2.  Define a `Deciduous` class that extends `Tree`
 
-3. Define a `Rectangle` subclass.
-* Define a static `name` property of `rectangle`.
-* `Rectangle` inherits `perimeter()` and can calculate perimeter
-* Define a method called `sayColor()` on `Rectangle` that returns "The rectangle is green" that uses the method from `color()` and the `name` property.
-* Define a method called `description()` on `Rectangle` that returns: "A parallelogram in which each angle is a right angle is called a rectangle."
+    - A `Deciduous` instance takes two parameters, `species` and `name`. Use
+      `super` in the constructor to use the parent class constructor to assign
+      `_species`, then assign `name` to a private property in the `Deciduous`
+      constructor
+    - Create a static method `definition` that uses `super` to access
+      `baseDefinition` from `Tree` and add the following to the provide a specific
+      definition for `Deciduous`:
 
-4. Define a `Trapezoid` subclass.
-* Define a static `name` property of `trapezoid`.
-* `Trapezoid` inherits `perimeter()` and can calculate perimeter
-* Define a method called `sayColor()` on `Trapezoid` that returns "The trapezoid is blue" that uses the method from `color()` and the `name` property.
-* Define a method called `description()` on `Rectangle` that returns: "In the US, a quadrilateral having exactly one pair of parallel sides is called a Trapezoid."
+    > Deciduous trees shed their leaves annually.
 
-5. Define a `Rhombus` subclass.
-* Define a static `name` property of `Rhombus`.
-* `Rhombus` inherits `perimeter()` and can calculate perimeter
-* Define a method called `sayColor()` on `Rhombus` that returns "The rhombus is yellow" that uses the method from `color()` and the `name` property.
-* Define a method called `description()` on `Rhombus` that returns: "A parallelogram having all sides equal, is called a rhombus."
+3.  Define a `Evergreen` class that extends `Tree`
 
-6. Define a `Parallelogram` subclass.
-* Define a static `name` property of `parallelogram`.
-* `Parallelogram` inherits `perimeter()` and can calculate perimeter
-* Define a method called `sayColor()` on `Parallelogram` that returns "The parallelogram is cyan" that uses the method from `color()` and the `name` property.
-* Define a method called `description()` on `Rhombus` that returns: "A quadrilateral is called a parallelogram, if both pairs of its opposite sides are parallel."
+    - A `Deciduous` instance takes two parameters, `species` and `name`. Use
+      `super` in the constructor to use the parent class constructor to assign
+      `_species`, then assign `name` to a private property in the `Evergreen`
+      constructor
+    - Create a static method `definition` that uses `super` to access
+      `baseDefinition` from `Tree` and add the following to the provide a specific
+      definition for `Evergreen`:
 
-7. Define a `Kite` subclass.
-* Define a static `name` property of `kite`.
-* `Kite` inherits `perimeter()` and can calculate perimeter
-* Define a method called `sayColor()` on `Kite` that returns "The kite is cyan" that uses the method from `color()` and the `name` property.
-* Define a method called `description()` on `Kite` that returns: "A quadrilateral is called a kite if it has two pairs of equal adjacent sides but unequal opposite sides."
-
-8. Define a `Trapezium` subclass.
-* Define a static `name` property of `trapezium`.
-* `Trapezium` inherits `perimeter()` and can calculate perimeter
-* Define a method called `sayColor()` on `Trapezium` that returns "The trapezium is white" that uses the method from `color()` and the `name` property.
-* Define a method called `description()` on `Trapezium` that returns: "In the US, a quadrilateral with no parallel sides is called a trapezium."
+    > Evergreens keep their leaves all year round.
 
 ## Resources
 
-* [Different Types of Quadrilaterals](https://www.math-only-math.com/different-types-of-quadrilaterals.html)
-* [Trapezium](http://mathworld.wolfram.com/Trapezium.html)
-* [“Super” and “Extends” In JavaScript ES6 - Understanding The Tough Parts](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
+- [Different Types of Quadrilaterals](https://www.math-only-math.com/different-types-of-quadrilaterals.html)
+- [Trapezium](http://mathworld.wolfram.com/Trapezium.html)
+- [“Super” and “Extends” In JavaScript ES6 - Understanding The Tough Parts](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
