@@ -1,9 +1,13 @@
 class Tree {
   constructor( species ) {
-    this.species = species
+    this._species = species
   }
 
-  static definition() {
+  get species() {
+    return this._species
+  }
+
+  static baseDefinition() {
     return 'A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves.'
   }
 
@@ -12,21 +16,21 @@ class Tree {
 class Deciduous extends Tree {
   constructor( species, name ) {
     super( species )
-    this.name = name
+    this._name = name
   }
 
   static definition() {
-    return `${super.definition()} Deciduous trees shed their leaves annually.`
+    return `${super.baseDefinition()} Deciduous trees shed their leaves annually.`
   }
 }
 
 class Evergreen extends Tree {
   constructor( species, name ) {
     super( species )
-    this.name = name
+    this._name = name
   }
 
   static definition() {
-    return `${super.definition()} Evergreens keep their leaves all year round.`
+    return `${super.baseDefinition()} Evergreens keep their leaves all year round.`
   }
 }
