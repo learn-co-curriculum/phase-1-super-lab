@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-1.  Practice using `super` to extend child class functionality
+* Practice using `super` to extend child class functionality
 
 ## Introduction
 
