@@ -7,7 +7,7 @@ describe( "Tree", () => {
   } )
 
   it( 'has a static method `baseDefinition` that returns a sentence on trees', () => {
-    expect( Tree.baseDefinition() ).to.eql( "A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves." )
+    expect( Tree.definition() ).to.eql( "A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves." )
   } )
 
 } )
