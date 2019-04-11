@@ -14,7 +14,7 @@ keyword.
 1.  Define a `Tree` class that will act as our parent.
 
     - A `Tree` instance should take in one parameter when created, `species`,
-      and assign this to a private property, `_species`
+      and assign this to a property named `species`.
     - A `Tree` should have a static method, `definition()`, that states a short
       definition of all trees.
 
@@ -25,8 +25,8 @@ keyword.
 
     - A `Deciduous` instance takes two parameters, `species` and `name`. Use
       `super()` in the constructor to use the parent class constructor to assign
-      `_species`, then assign `name` to a private property in the `Deciduous`
-      constructor
+      `species`. After `super()`, assign the `name` parameter to the a `name`
+      property in the `Deciduous` constructor
     - Create a static method, `definition()`, that uses `super` to access
       `definition()` from `Tree` and add the following to the provide a specific
       definition for `Deciduous`:
@@ -37,7 +37,7 @@ keyword.
 
     - A `Deciduous` instance takes two parameters, `species` and `name`. Use
       `super()` in the constructor to use the parent class constructor to assign
-      `_species`, then assign `name` to a private property in the `Evergreen`
+      `species`, then assign `name` to a property in the `Evergreen`
       constructor
     - Create a static method, `definition()`, that uses `super` to access
       `definition()` from `Tree` and add the following to the provide a specific
@@ -47,4 +47,5 @@ keyword.
 
 ## Resources
 
+- [Static Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static#Examples)
 - [“Super” and “Extends” In JavaScript ES6 - Understanding The Tough Parts](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
