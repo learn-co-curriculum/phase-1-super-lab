@@ -1,7 +1,7 @@
 describe( "Tree", () => {
   let tree
 
-  it( 'initializes an instance with one parameter and assigns it to `_species`', () => {
+  it( 'initializes an instance with one parameter and assigns it to `species`', () => {
     tree = new Tree( 'Maple' )
     expect( tree.species )
       .to.eql( 'Maple' )
@@ -17,7 +17,7 @@ describe( "Tree", () => {
 describe( "Deciduous", () => {
   let oak
 
-  it( 'initializes with two parameters, species and name, and uses `super` to set `_species`', () => {
+  it( 'initializes with two parameters, species and name, and uses `super` to set `species`', () => {
     oak = new Deciduous( 'Oak', 'Professor' )
     expect( oak.species )
       .to.eql( 'Oak' )
@@ -35,11 +35,11 @@ describe( "Deciduous", () => {
 describe( "Evergreen", () => {
   let fir
 
-  it( 'initializes with two parameters, species and name, and uses `super` to set `_species`', () => {
+  it( 'initializes with two parameters, species and name, and uses `super` to set `species`', () => {
     fir = new Evergreen( 'Fir', 'Douglas' )
-    expect( fir._species )
+    expect( fir.species )
       .to.eql( 'Fir' )
-    expect( fir._name )
+    expect( fir.name )
       .to.eql( 'Douglas' )
   } )
 
