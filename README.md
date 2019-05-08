@@ -35,7 +35,7 @@ keyword.
 
 3.  Define a `Evergreen` class that extends `Tree`
 
-    - A `Deciduous` instance takes two parameters, `species` and `name`. Use
+    - An `Evergreen` instance takes two parameters, `species` and `name`. Use
       `super()` in the constructor to use the parent class constructor to assign
       `species`, then assign `name` to a property in the `Evergreen`
       constructor
