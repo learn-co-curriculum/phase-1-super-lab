@@ -7,7 +7,7 @@ describe( "Tree", () => {
       .to.eql( 'Maple' )
   } )
 
-  it( 'has a static method `baseDefinition` that returns a sentence on trees', () => {
+  it( 'has a static method `definition` that returns a sentence on trees', () => {
     expect( Tree.definition() )
       .to.eql( "A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves." )
   } )
@@ -25,7 +25,7 @@ describe( "Deciduous", () => {
       .to.eql( 'Professor' )
   } )
 
-  it( 'has a static method `definition` that uses `super.baseDefinition` and expands on it', () => {
+  it( 'has a static method `definition` that uses `super.definition` and expands on it', () => {
     expect( Deciduous.definition() )
       .to.eql( "A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves. Deciduous trees shed their leaves annually." )
   } )
@@ -43,7 +43,7 @@ describe( "Evergreen", () => {
       .to.eql( 'Douglas' )
   } )
 
-  it( 'has a static method `definition` that uses `super.baseDefinition` and expands on it', () => {
+  it( 'has a static method `definition` that uses `super.definition` and expands on it', () => {
     expect( Evergreen.definition() )
       .to.eql( "A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves. Evergreens keep their leaves all year round." )
   } )
