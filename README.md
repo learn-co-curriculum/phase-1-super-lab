@@ -18,8 +18,7 @@ keyword.
     - A `Tree` should have a static method, `definition()`, that returns a short
       definition of all trees.
 
-    > A tree is a perennial plant with an elongated stem, or trunk, supporting
-    > branches and leaves.
+    > A tree is a perennial plant with an elongated stem, or trunk, supporting branches and leaves.
 
 2.  Define a `Deciduous` class that extends `Tree`
 
