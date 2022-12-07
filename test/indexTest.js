@@ -1,3 +1,5 @@
+require ( './helpers.js' );
+
 describe( "Tree", () => {
   let tree
 
